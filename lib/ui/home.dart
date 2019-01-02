@@ -25,7 +25,7 @@ class Home extends StatelessWidget{
         ],
       ),
 
-        backgroundColor: Colors.lightGreen.shade600,
+        backgroundColor: Colors.white70,
         body: new Container(
           alignment: Alignment.center,
           child: new Column(
@@ -45,9 +45,49 @@ class Home extends StatelessWidget{
             ],
           ),
         ),
+
+          floatingActionButton: new FloatingActionButton(
+            onPressed:()=> debugPrint("Pressed!"),
+            backgroundColor: Colors.blueAccent,
+            tooltip: "Going up",
+            child: new Icon(Icons.call_missed),),
+
+          bottomNavigationBar: new BottomNavigationBar(items: [
+            new BottomNavigationBarItem(icon: new Icon(Icons.add), title: new Text("Hey")),
+            new BottomNavigationBarItem(icon: new Icon(Icons.print), title: new Text("Nope")),
+            new BottomNavigationBarItem(icon: new Icon(Icons.mic), title: new Text("Hello")),
+          ], onTap: (int i) => debugPrint("Hey Touched $i"),),
+
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*class Home extends StatelessWidget {
   @override
