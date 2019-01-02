@@ -9,7 +9,18 @@ class Home extends StatelessWidget {
         color: Colors.greenAccent,
         alignment: Alignment.center,
 
-      child: new Row(
+        child: new Stack(
+          alignment: Alignment.bottomCenter,
+            children: <Widget>[
+              const Text("Hello there"),
+              const Text("Hey Again"),
+              const Text("1")
+            ],
+        ),
+
+
+
+      /*child: new Row(
         mainAxisAlignment: MainAxisAlignment.center,
 
         children: <Widget>[
@@ -23,7 +34,7 @@ class Home extends StatelessWidget {
             child: const Text("Item 3"),
           )
         ],
-      ),
+      ),*/
 
       /*child: new Column(
         mainAxisAlignment: MainAxisAlignment.center,
