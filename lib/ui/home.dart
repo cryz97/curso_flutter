@@ -1,7 +1,55 @@
 import 'package:flutter/material.dart';
 
 
-class Home extends StatelessWidget {
+class Home extends StatelessWidget{
+
+  void _onPress(){
+    print("Search tapped");
+  }
+
+  @override
+  Widget build(BuildContext context) {
+
+    return new Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.lightBlueAccent.shade700,
+        title: new Text("Fency Day"),
+
+        actions: <Widget>[
+
+                new IconButton(icon: new Icon(Icons.send), onPressed: () => debugPrint("Icon Tapped!")),
+
+                new IconButton(icon: new Icon(Icons.search), onPressed: _onPress)
+
+
+        ],
+      ),
+
+        backgroundColor: Colors.lightGreen.shade600,
+        body: new Container(
+          alignment: Alignment.center,
+          child: new Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              new Text("Chris", style: new TextStyle(
+                fontSize: 34,
+                fontWeight: FontWeight.w300,
+                color: Colors.deepPurpleAccent
+              ),),
+
+              new InkWell(
+                child: new Text("Button!"),
+                onTap: () => debugPrint("Button tapped!"),
+              )
+
+            ],
+          ),
+        ),
+    );
+  }
+}
+
+/*class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
@@ -18,9 +66,7 @@ class Home extends StatelessWidget {
             ],
         ),
 
-
-
-      /*child: new Row(
+       /*child: new Row(
         mainAxisAlignment: MainAxisAlignment.center,
 
         children: <Widget>[
@@ -58,9 +104,9 @@ class Home extends StatelessWidget {
 
 
 
-      /*  child: new Text("Hello container", textDirection: TextDirection.ltr,
-          style: new TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18),)*/
+       child: new Text("Hello container", textDirection: TextDirection.ltr,
+          style: new TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 18),)
 
     );
   }
-}
+}*/
