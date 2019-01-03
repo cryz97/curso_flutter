@@ -29,7 +29,8 @@ class Home extends StatelessWidget {
 
       onTap: () {
         final snackBar = new SnackBar(content: new Text("Hello Gestures!"),
-        backgroundColor: Theme.of(context).backgroundColor,);
+        backgroundColor: Theme.of(context).backgroundColor,
+        duration: new Duration(hours: 0, minutes: 0, seconds: 0, milliseconds: 900, microseconds: 0),);
 
         Scaffold.of(context).showSnackBar(snackBar);
       },
